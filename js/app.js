@@ -18,7 +18,7 @@ Enemy.prototype.update = function(dt) {
     // Once enemies are off canvas, make them reappear with different speeds
     if (this.x > 510){
         this.x = 50;
-        this.speed = 100 + Math.floor(Math.random() * 222);
+        this.speed = 100 + Math.floor(Math.random() * 200);
     }
     // Check for collision between player and enemy
     if ((player.x < this.x + 80 && player.x + 80 > this.x) &&
@@ -73,7 +73,7 @@ Player.prototype.handleInput = function(keyPress) {
         setTimeout(() =>{
             this.x = 202;
             this.y = 405;
-        }, 800);
+        }, 500);
     }
 };
 
@@ -83,7 +83,7 @@ var allEnemies = [];
 var enemyLocation = [63, 147, 230];
 // Initial enemy movement
 enemyLocation.forEach(function(locationY){
-    enemy = new Enemy(0, locationY, (Math.floor(Math.random() * 222)));
+    enemy = new Enemy(0, locationY, (Math.floor(Math.random() * 200)));
     allEnemies.push(enemy);
 });
 
