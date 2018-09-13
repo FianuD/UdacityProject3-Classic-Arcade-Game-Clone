@@ -17,8 +17,8 @@ Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
     // Once enemies are off canvas, make them reappear with different speeds
     if (this.x > 510){
-        this.x = 50;
-        this.speed = 100 + Math.floor(Math.random() * 200);
+        this.x = 0;
+        this.speed = 80 + Math.floor(Math.random() * 200);
     }
     // Check for collision between player and enemy
     if ((player.x < this.x + 80 && player.x + 80 > this.x) &&
@@ -53,14 +53,6 @@ Player.prototype.render = function() {
 
 // Control Player with arrow keys
 Player.prototype.handleInput = function(keyPress) {
-     // Up arrow key moves player up on y-axis by 83, keeps player within bounds
-    if (keyPress === 'up' && this.y > 0) {
-        this.y -= 83;
-    }
-    // Down arrow key moves down player on x-axis by 83, keeps player within bounds
-    if (keyPress === 'down' && this.y < 405) {
-        this.x += 83;
-    }
     // Left arrow key moves player on x-axis to the left by 102, keeps player within bounds
     if (keyPress === 'left' && this.x > 0) {
         this.x -= 102;
@@ -68,6 +60,14 @@ Player.prototype.handleInput = function(keyPress) {
     // Right arrow key moves player on x-axis to the right by 102, keeps player within bounds
     if (keyPress === 'right' && this.x < 405) {
         this.x += 102;
+    }
+    // Up arrow key moves player up on y-axis by 83, keeps player within bounds
+    if (keyPress === 'up' && this.y > 0) {
+        this.y -= 83;
+    }
+    // Down arrow key moves down player on x-axis by 83, keeps player within bounds
+    if (keyPress === 'down' && this.y < 405) {
+        this.y += 83;
     }
     // Reset player position upon reaching top of board/water
     if (this.y < 0) {
@@ -84,7 +84,7 @@ var allEnemies = [];
 var enemyLocation = [63, 147, 230];
 // Initial enemy movement
 enemyLocation.forEach(function(locationY){
-    enemy = new Enemy(0, locationY, (Math.floor(Math.random() * 200)));
+    enemy = new Enemy(0, locationY, (50 + Math.floor(Math.random() * 200)));
     allEnemies.push(enemy);
 });
 
