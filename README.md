@@ -1,10 +1,10 @@
-# Classic Arcade Game Clone project
+# Classic Arcade Game Clone(Frogger)
 
 ### About
 
 Third project from the Front-End Web Developer Nanodegree in
 <a href="https://www.udacity.com" target="_blank">Udacity</a>:
-Using provided visual asset and engine.js; add a number of entities to the game including the player enemies and items to recreated the classic arcade game Froggerwith Object-Oriented JavaScript and HTML5 Canvas.
+Using visual asset and engine.js provided by Udacity in start code; add a number of entities to the game including player character and enemies to recreate the classic arcade game Frogger with Object-Oriented JavaScript and HTML5 Canvas.
 
 ### How to run the game?
 
@@ -14,6 +14,6 @@ Download the repository in your computer, unzip the file and open "index.html" t
 
 To play the game, use the arrow keys from your keyboard to move your player up, right, down and left to lead the Char Boy to the river.
 
-### Scrennshot
+### Screenshot of Game
 
 ![screenshot](images/ScreenshotFrogger.png "Game Screenshot")
