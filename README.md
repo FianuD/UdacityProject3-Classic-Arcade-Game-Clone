@@ -12,7 +12,7 @@ Download the repository in your computer, unzip the file and open "index.html" t
 
 ### How to play?
 
-To play the game, use the arrow keys from your keyboard to move your player up, right, down and left to lead the Char Boy to the river.
+To play the game, use the arrow keys from your keyboard to move your player up, right, down and left to lead the player character to the water.
 
 ### Screenshot of Game
 
