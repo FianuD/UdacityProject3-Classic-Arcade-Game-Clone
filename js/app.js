@@ -23,6 +23,7 @@ Enemy.prototype.update = function(dt) {
     // Check for collision between player and enemy
     if ((player.x < this.x + 80 && player.x + 80 > this.x) &&
         (player.y < this.y + 60 && player.y + 60 > this.y)){
+            // Sends player back to starting position
             player.x = 202;
             player.y = 405;
         }
