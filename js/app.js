@@ -53,6 +53,14 @@ Player.prototype.render = function() {
 
 // Control Player with arrow keys
 Player.prototype.handleInput = function(keyPress) {
+     // Up arrow key moves player up on y-axis by 83, keeps player within bounds
+    if (keyPress === 'up' && this.y > 0) {
+        this.y -= 83;
+    }
+    // Down arrow key moves down player on x-axis by 83, keeps player within bounds
+    if (keyPress === 'down' && this.y < 405) {
+        this.x += 83;
+    }
     // Left arrow key moves player on x-axis to the left by 102, keeps player within bounds
     if (keyPress === 'left' && this.x > 0) {
         this.x -= 102;
@@ -60,14 +68,6 @@ Player.prototype.handleInput = function(keyPress) {
     // Right arrow key moves player on x-axis to the right by 102, keeps player within bounds
     if (keyPress === 'right' && this.x < 405) {
         this.x += 102;
-    }
-    // Up arrow key moves player up on y-axis by 83, keeps player within bounds
-    if (keyPress === 'up' && this.y > 0) {
-        this.y -= 83;
-    }
-    // Down arrow key moves down player on x-axis by 83, keeps player within bounds
-    if (keyPress === 'down' && this.y < 405) {
-        this.x += 83;
     }
     // Reset player position upon reaching top of board/water
     if (this.y < 0) {
