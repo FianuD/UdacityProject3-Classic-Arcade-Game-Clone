@@ -8,7 +8,7 @@ Using visual asset and engine.js provided by Udacity in start code; add a number
 
 ### How to run the game?
 
-Download the repository in your computer, unzip the file and open "index.html" to play the game.
+Download the repository in your computer, unzip the file and open "index.html" in your browser to play the game.
 
 ### How to play?
 
